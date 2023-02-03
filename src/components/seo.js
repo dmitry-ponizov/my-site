@@ -5,8 +5,8 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
 function Seo({ description, title, children }) {
   const { site } = useStaticQuery(

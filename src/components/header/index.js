@@ -1,5 +1,5 @@
 import React from "react"
 
-const Header = ({ siteTitle }) => <header>Header</header>
+const Header = () => <header>Header</header>
 
 export default Header

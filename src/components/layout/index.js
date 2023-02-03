@@ -1,18 +1,12 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
- */
+import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
 
-import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "../header"
 import Footer from "../footer"
+import Header from "../header"
+
+import { Main, Wrapper } from "./styled"
 
 import "./reset.css"
-import { Main, Wrapper } from "./styled"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
