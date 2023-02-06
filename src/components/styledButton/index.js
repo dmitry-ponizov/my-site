@@ -2,8 +2,8 @@ import React from "react"
 
 import { StyledBtn } from "./styled"
 
-const StyledButton = ({ children, fontSize }) => {
-  return <StyledBtn style={{ fontSize: fontSize }}>{children}</StyledBtn>
+const StyledButton = ({ children }) => {
+  return <StyledBtn>{children}</StyledBtn>
 }
 
 export default StyledButton
