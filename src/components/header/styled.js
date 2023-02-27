@@ -14,11 +14,11 @@ export const HeaderContainer = styled.div`
   transition: box-shadow 0.2s ease, top 0.4s ease 0.2s;
   box-shadow: ${props => !props.isTop && "0 10px 30px -10px rgba(2,12,27,0.7)"};
   top: ${props => (props.isScrollDown ? "-100px" : 0)};
-`
 
-export const HeaderLogo = styled.img`
-  height: 42px;
-  width: 42px;
+  & > svg {
+    height: 42px;
+    width: 42px;
+  }
 `
 
 export const Navigation = styled.nav`

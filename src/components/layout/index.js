@@ -3,6 +3,7 @@ import { graphql, useStaticQuery } from "gatsby"
 
 import Footer from "../footer"
 import Header from "../header"
+import LeftSidebar from "../leftSidebar"
 
 import { Main, Wrapper } from "./styled"
 
@@ -38,6 +39,8 @@ const Layout = ({ children }) => {
         setMenuActive={setMenuActive}
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />
+
+      <LeftSidebar />
 
       <Main menuActive={menuActive}>{children}</Main>
 
