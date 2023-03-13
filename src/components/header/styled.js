@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const HeaderContainer = styled.div`
+export const HeaderContainer = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -18,6 +18,14 @@ export const HeaderContainer = styled.div`
   & > svg {
     height: 42px;
     width: 42px;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0px 40px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0px 25px;
   }
 `
 

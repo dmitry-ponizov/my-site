@@ -8,6 +8,10 @@ export const SocialsWrapper = styled.div`
   right: auto;
   z-index: 10;
   color: #a8b2d1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const Socials = styled.ul`
@@ -18,10 +22,9 @@ export const Socials = styled.ul`
 
   &::after {
     content: "";
-    display: block;
     width: 1px;
     height: 90px;
-    margin: 0px auto;
+    margin-top: 20px;
     background-color: #a8b2d1;
   }
 `
@@ -29,7 +32,16 @@ export const Socials = styled.ul`
 export const SocialLink = styled.a`
   padding: 10px;
   display: block;
+
+  &:hover {
+    & > svg {
+      stroke: #64ffda;
+      transform: translateY(-3px);
+    }
+  }
+
   & > svg {
+    transition: all 0.2s ease;
     width: 20px;
     height: 20px;
   }

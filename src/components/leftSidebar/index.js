@@ -16,6 +16,7 @@ const LeftSidebar = () => {
     { icon: <LinkedinIcon />, link: "https://www.linkedin.com/in/bchiang7/" },
     { icon: <CodepenIcon />, link: "https://codepen.io/bchiang7" },
   ]
+
   return (
     <SocialsWrapper>
       <Socials>
