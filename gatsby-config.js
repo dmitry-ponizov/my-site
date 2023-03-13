@@ -60,6 +60,20 @@ module.exports = {
         exclude: ["node_modules", "bower_components", ".cache", "public"],
       },
     },
-    "gatsby-plugin-styled-components",
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-anchor-links`,
+    {
+      resolve: `gatsby-plugin-google-fonts-v2`,
+      options: {
+        fonts: [
+          {
+            family: `Calibre`,
+          },
+          {
+            family: `Fira Mono`,
+          },
+        ],
+      },
+    },
   ],
 }

@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Footer from "../footer"
@@ -19,13 +19,29 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const [menuActive, setMenuActive] = useState(false)
+
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.overflow = "hidden"
+    }
+
+    return () => {
+      document.body.style.overflow = null
+    }
+  }, [menuActive])
+
   return (
     <Wrapper>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        menuActive={menuActive}
+        setMenuActive={setMenuActive}
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+      />
 
-      <Main>{children}</Main>
+      <Main menuActive={menuActive}>{children}</Main>
 
-      <Footer />
+      <Footer menuActive={menuActive} />
     </Wrapper>
   )
 }
