@@ -3,12 +3,11 @@ import Burger from "@animated-burgers/burger-rotate"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { useScrollDirection } from "../../hooks/useScrollDirection"
-import logo from "../../images/logo.svg"
+import HeaderLogo from "../../images/logo.svg"
 import StyledButton from "../styledButton"
 
 import {
   HeaderContainer,
-  HeaderLogo,
   Navigation,
   Navlist,
   NavlistItem,
@@ -29,7 +28,7 @@ const Header = ({ menuActive, setMenuActive }) => {
 
   return (
     <HeaderContainer isTop={isTop} isScrollDown={isScrollDown}>
-      <HeaderLogo src={logo} alt="logo" />
+      <HeaderLogo />
 
       <Navigation>
         <Navlist isOpen={menuActive}>
