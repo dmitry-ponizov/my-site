@@ -1,33 +1,36 @@
 import React from "react"
+import { graphql, useStaticQuery } from "gatsby"
+import parse from "html-react-parser"
 
 import { IntroButton, IntroWrapper } from "./styled"
 
 const Intro = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMdx {
+        nodes {
+          body
+          frontmatter {
+            buttonLink
+            buttonText
+          }
+        }
+      }
+    }
+  `)
+
+  const {
+    body,
+    frontmatter: { buttonLink, buttonText },
+  } = data.allMdx.nodes[0]
+
   return (
     <IntroWrapper>
-      <h1>Hi, my name is</h1>
-
-      <h2>Brittany Chiang.</h2>
-
-      <h3>I build things for the web.</h3>
-
-      <p>
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible, human-centered products at{" "}
-        <a href="https://upstatement.com/" target="_blank" rel="noreferrer">
-          Upstatement
-        </a>
-        .
-      </p>
+      {parse(body)}
 
       <IntroButton>
-        <a
-          href="https://brittanychiang.com/resume.pdf"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Check out my course!
+        <a href={buttonLink} target="_blank" rel="noreferrer">
+          {buttonText}
         </a>
       </IntroButton>
     </IntroWrapper>
