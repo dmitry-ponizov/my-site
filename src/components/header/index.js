@@ -6,12 +6,7 @@ import { useScrollDirection } from "../../hooks/useScrollDirection"
 import HeaderLogo from "../../images/logo.svg"
 import StyledButton from "../styledButton"
 
-import {
-  HeaderContainer,
-  Navigation,
-  Navlist,
-  NavlistItem,
-} from "./styled"
+import { HeaderContainer, Navigation, Navlist, NavlistItem } from "./styled"
 
 import "@animated-burgers/burger-rotate/dist/styles.css"
 
@@ -41,15 +36,10 @@ const Header = ({ menuActive, setMenuActive }) => {
             </NavlistItem>
           ))}
 
-          <StyledButton>
-            <a
-              href="https://brittanychiang.com/resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Resume
-            </a>
-          </StyledButton>
+          <StyledButton
+            buttonLink="https://brittanychiang.com/resume.pdf"
+            buttonText="Resume"
+          />
         </Navlist>
 
         <Burger

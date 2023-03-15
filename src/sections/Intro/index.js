@@ -29,11 +29,11 @@ const Intro = () => {
     <IntroWrapper>
       {parse(body)}
 
-      <StyledButton bigVariant>
-        <a href={buttonLink} target="_blank" rel="noreferrer">
-          {buttonText}
-        </a>
-      </StyledButton>
+      <StyledButton
+        bigVariant
+        buttonLink={buttonLink}
+        buttonText={buttonText}
+      />
     </IntroWrapper>
   )
 }
