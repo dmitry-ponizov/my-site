@@ -2,7 +2,9 @@ import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
 
-import { IntroButton, IntroWrapper } from "./styled"
+import StyledButton from "../../components/styledButton"
+
+import { IntroWrapper } from "./styled"
 
 const Intro = () => {
   const data = useStaticQuery(graphql`
@@ -28,11 +30,11 @@ const Intro = () => {
     <IntroWrapper>
       {parse(body)}
 
-      <IntroButton>
+      <StyledButton bigVariant>
         <a href={buttonLink} target="_blank" rel="noreferrer">
           {buttonText}
         </a>
-      </IntroButton>
+      </StyledButton>
     </IntroWrapper>
   )
 }
