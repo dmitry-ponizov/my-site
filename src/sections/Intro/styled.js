@@ -27,22 +27,22 @@ export const IntroWrapper = styled.section`
   h3 {
     color: #8892b0;
   }
+
+  p {
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #8892b0;
+    margin: 30px 0 50px 0;
+    max-width: 547px;
+    @media (max-width: 480px) {
+      font-size: 15px;
+    }
+  }
 `
 export const IntroButton = styled(StyledBtn)`
   font-family: var(--font-mono);
   font-size: 14px;
   padding: 1.25rem 1.75rem;
   line-height: 1;
-`
-
-export const IntroText = styled.p`
-  font-size: 17px;
-  line-height: 1.4;
-  font-weight: 400;
-  color: #8892b0;
-  margin: 30px 0 50px 0;
-  max-width: 547px;
-  @media (max-width: 480px) {
-    font-size: 15px;
-  }
 `

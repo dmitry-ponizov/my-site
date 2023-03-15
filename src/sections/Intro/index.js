@@ -2,7 +2,7 @@ import React from "react"
 
 import StyledLink from "../../components/styledLink"
 
-import { IntroButton, IntroText, IntroWrapper } from "./styled"
+import { IntroButton, IntroWrapper } from "./styled"
 
 const Intro = () => {
   return (
@@ -13,12 +13,12 @@ const Intro = () => {
 
       <h3>I build things for the web.</h3>
 
-      <IntroText>
+      <p>
         I’m a software engineer specializing in building (and occasionally
         designing) exceptional digital experiences. Currently, I’m focused on
         building accessible, human-centered products at{" "}
         <StyledLink href="https://upstatement.com/">Upstatement</StyledLink>.
-      </IntroText>
+      </p>
 
       <IntroButton>
         <a

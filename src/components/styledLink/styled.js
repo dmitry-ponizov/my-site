@@ -3,8 +3,6 @@ import styled from "styled-components"
 export const ActiveLink = styled.a`
   display: inline-block;
   color: #64ffda !important;
-  text-decoration: none;
-  text-decoration-skip-ink: auto;
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   &::after {
     content: "";
