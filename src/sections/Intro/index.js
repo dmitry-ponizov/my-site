@@ -9,13 +9,12 @@ import { IntroWrapper } from "./styled"
 const Intro = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMdx {
-        nodes {
-          body
-          frontmatter {
-            buttonLink
-            buttonText
-          }
+      mdx(frontmatter: { section: { eq: "intro" } }) {
+        id
+        body
+        frontmatter {
+          buttonLink
+          buttonText
         }
       }
     }
@@ -24,7 +23,7 @@ const Intro = () => {
   const {
     body,
     frontmatter: { buttonLink, buttonText },
-  } = data.allMdx.nodes[0]
+  } = data.mdx
 
   return (
     <IntroWrapper>
