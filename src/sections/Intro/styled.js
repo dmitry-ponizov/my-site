@@ -1,6 +1,7 @@
 import styled from "styled-components"
 
 import { StyledBtn } from "../../components/styledButton/styled"
+import { linkStyles } from "../../constants/index"
 
 export const IntroWrapper = styled.section`
   font-family: var(--font-sans);
@@ -35,6 +36,10 @@ export const IntroWrapper = styled.section`
     color: #8892b0;
     margin: 30px 0 50px 0;
     max-width: 547px;
+    a {
+      ${linkStyles}
+    }
+
     @media (max-width: 480px) {
       font-size: 15px;
     }
