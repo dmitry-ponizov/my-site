@@ -9,6 +9,10 @@ export const SocialsWrapper = styled.div`
   z-index: 10;
   color: #a8b2d1;
 
+  @media (max-width: 1024px) {
+    left: 20px;
+  }
+
   @media (max-width: 768px) {
     display: none;
   }

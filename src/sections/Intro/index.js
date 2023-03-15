@@ -2,23 +2,16 @@ import React from "react"
 
 import StyledLink from "../../components/styledLink"
 
-import {
-  FirstTitle,
-  IntroButton,
-  IntroText,
-  IntroWrapper,
-  SecondTitle,
-  ThirdTitle,
-} from "./styled"
+import { IntroButton, IntroText, IntroWrapper } from "./styled"
 
 const Intro = () => {
   return (
     <IntroWrapper>
-      <FirstTitle>Hi, my name is</FirstTitle>
+      <h1>Hi, my name is</h1>
 
-      <SecondTitle>Brittany Chiang.</SecondTitle>
+      <h2>Brittany Chiang.</h2>
 
-      <ThirdTitle>I build things for the web.</ThirdTitle>
+      <h3>I build things for the web.</h3>
 
       <IntroText>
         I’m a software engineer specializing in building (and occasionally
