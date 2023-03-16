@@ -26,7 +26,7 @@ const Intro = () => {
   } = data.mdx
 
   return (
-    <IntroWrapper>
+    <IntroWrapper id="intro">
       {parse(body)}
 
       <StyledButton

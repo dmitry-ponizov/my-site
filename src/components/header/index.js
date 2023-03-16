@@ -18,7 +18,9 @@ const Header = ({ menuActive, setMenuActive, data }) => {
 
   return (
     <HeaderContainer isTop={isTop} isScrollDown={isScrollDown}>
-      <HeaderLogo />
+      <AnchorLink to="#intro">
+        <HeaderLogo />
+      </AnchorLink>
 
       <Navigation>
         <Navlist isOpen={menuActive}>
