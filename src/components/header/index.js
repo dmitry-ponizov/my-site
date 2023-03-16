@@ -33,7 +33,7 @@ const Header = ({ menuActive, setMenuActive, data }) => {
             </NavlistItem>
           ))}
 
-          <StyledButton buttonLink={buttonLink} buttonText={buttonText} />
+          <StyledButton link={buttonLink} text={buttonText} />
         </Navlist>
 
         <Burger

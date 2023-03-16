@@ -5,24 +5,24 @@ import { StyledBtn } from "./styled"
 const StyledButton = ({
   withLink = true,
   bigVariant = false,
-  buttonLink,
-  buttonText,
+  link,
+  text,
   onClick,
 }) => {
   return (
     <StyledBtn
       withLink={withLink}
       bigVariant={bigVariant}
-      buttonLink={buttonLink}
-      buttonText={buttonText}
+      link={link}
+      buttonText={text}
       onClick={onClick}
     >
       {withLink ? (
-        <a href={buttonLink} target="_blank" rel="noreferrer">
-          {buttonText}
+        <a href={link} target="_blank" rel="noreferrer">
+          {text}
         </a>
       ) : (
-        buttonText
+        text
       )}
     </StyledBtn>
   )

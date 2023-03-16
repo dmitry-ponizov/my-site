@@ -9,6 +9,7 @@ import RightSidebar from "../rightSidebar"
 import { Main, Wrapper } from "./styled"
 
 import "./reset.css"
+import "./global.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
