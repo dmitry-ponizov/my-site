@@ -41,7 +41,7 @@ export const EmailLink = styled.a`
   transition: all 0.2s ease;
 
   &:hover {
-    color: #64ffda;
+    color: var(--accent);
     transform: translateY(-3px);
   }
 `

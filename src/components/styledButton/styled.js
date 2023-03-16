@@ -1,10 +1,10 @@
 import styled from "styled-components"
 
 export const StyledBtn = styled.button`
-  color: #64ffda;
+  color: var(--accent);
   font-family: var(--font-mono);
   background-color: transparent;
-  border: 1px solid #64ffda;
+  border: 1px solid var(--accent);
   border-radius: 4px;
   padding: 11px 16px;
   font-size: 13px;
