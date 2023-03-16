@@ -10,16 +10,11 @@ import { HeaderContainer, Navigation, Navlist, NavlistItem } from "./styled"
 
 import "@animated-burgers/burger-rotate/dist/styles.css"
 
-const Header = ({ menuActive, setMenuActive }) => {
+const Header = ({ menuActive, setMenuActive, data }) => {
+  const { navListItems, buttonLink, buttonText } = data.frontmatter
+
   const { isTop, scrollDirection } = useScrollDirection()
   const isScrollDown = scrollDirection === "down"
-
-  const listItems = [
-    { name: "About", anchor: "#footer" },
-    { name: "Experience", anchor: "#footer" },
-    { name: "Work", anchor: "#footer" },
-    { name: "Contact", anchor: "#footer" },
-  ]
 
   return (
     <HeaderContainer isTop={isTop} isScrollDown={isScrollDown}>
@@ -27,7 +22,7 @@ const Header = ({ menuActive, setMenuActive }) => {
 
       <Navigation>
         <Navlist isOpen={menuActive}>
-          {listItems.map(({ name, anchor }, index) => (
+          {navListItems.map(({ name, anchor }, index) => (
             <NavlistItem onClick={() => setMenuActive(false)} key={index}>
               <AnchorLink to={anchor}>
                 <span>0{index + 1}.</span>
@@ -36,10 +31,7 @@ const Header = ({ menuActive, setMenuActive }) => {
             </NavlistItem>
           ))}
 
-          <StyledButton
-            buttonLink="https://brittanychiang.com/resume.pdf"
-            buttonText="Resume"
-          />
+          <StyledButton buttonLink={buttonLink} buttonText={buttonText} />
         </Navlist>
 
         <Burger

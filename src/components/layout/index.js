@@ -12,10 +12,30 @@ import "./reset.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query {
       site {
         siteMetadata {
           title
+        }
+      }
+      header: mdx(frontmatter: { type: { eq: "header" } }) {
+        frontmatter {
+          navListItems {
+            name
+            anchor
+          }
+          buttonLink
+          buttonText
+        }
+      }
+      sidebars: mdx(frontmatter: { type: { eq: "sidebars" } }) {
+        frontmatter {
+          githubLink
+          instagramLink
+          twitterLink
+          linkedinLink
+          codepenLink
+          email
         }
       }
     }
@@ -33,17 +53,20 @@ const Layout = ({ children }) => {
     }
   }, [menuActive])
 
+  const sidebarEmail = data.sidebars.frontmatter.email
+
   return (
     <Wrapper>
       <Header
         menuActive={menuActive}
         setMenuActive={setMenuActive}
         siteTitle={data.site.siteMetadata?.title || `Title`}
+        data={data.header}
       />
 
-      <LeftSidebar />
+      <LeftSidebar data={data.sidebars.frontmatter} />
 
-      <RightSidebar />
+      <RightSidebar email={sidebarEmail} />
 
       <Main menuActive={menuActive}>{children}</Main>
 
