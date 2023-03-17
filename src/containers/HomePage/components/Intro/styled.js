@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import { linkStyles } from "../../../../constants/index"
-
 export const IntroWrapper = styled.section`
   font-family: var(--font-sans);
   font-size: clamp(40px, 8vw, 70px);
