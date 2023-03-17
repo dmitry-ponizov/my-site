@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import { ProjectBtn } from "../../components/styledButton/styled"
+import { StyledBtn } from "../../components/styledButton/styled"
 
 export const IntroWrapper = styled.section`
   font-family: var(--font-sans);
@@ -40,7 +40,7 @@ export const IntroWrapper = styled.section`
     }
   }
 `
-export const IntroButton = styled(ProjectBtn)`
+export const IntroButton = styled(StyledBtn)`
   font-family: var(--font-mono);
   font-size: 14px;
   padding: 1.25rem 1.75rem;

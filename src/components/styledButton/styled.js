@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const ProjectBtn = styled.button`
+export const StyledBtn = styled.button`
   color: var(--accent);
   font-family: var(--font-mono);
   background-color: transparent;

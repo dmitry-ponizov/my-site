@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const StyleTitle = styled.h2`
+export const StyledTitle = styled.h2`
   display: flex;
   align-items: center;
   margin: 10px 0px 40px;
@@ -11,7 +11,6 @@ export const StyleTitle = styled.h2`
   &::after {
     content: "";
     width: 300px;
-    /* width: 100%; */
     height: 1px;
     margin-left: 20px;
     background-color: #233554;

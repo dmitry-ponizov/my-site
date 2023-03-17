@@ -1,9 +1,9 @@
 import React from "react"
 
-import { StyleTitle } from "./styled"
+import { StyledTitle } from "./styled"
 
 const SectionTitle = ({ children }) => {
-  return <StyleTitle>{children}</StyleTitle>
+  return <StyledTitle>{children}</StyledTitle>
 }
 
 export default SectionTitle
