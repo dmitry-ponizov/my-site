@@ -1,9 +1,9 @@
 import React from "react"
 
-import { StyledBtn } from "./styled"
+import { ProjectBtn } from "./styled"
 
 const StyledButton = ({ children }) => {
-  return <StyledBtn>{children}</StyledBtn>
+  return <ProjectBtn>{children}</ProjectBtn>
 }
 
 export default StyledButton

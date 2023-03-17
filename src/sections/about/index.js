@@ -1,17 +1,17 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import SectionTitle from "../../components/sectionTitle"
 import StyledLink from "../../components/styledLink"
+import StyledTitle from "../../components/styledTitle"
 
 import { AboutWrapper, ContentWrapper, ImageWrapper } from "./styled"
 
 const About = () => {
   return (
     <AboutWrapper>
-      <SectionTitle>
+      <StyledTitle>
         <span>01.</span>About Me
-      </SectionTitle>
+      </StyledTitle>
 
       <ContentWrapper>
         <div>
