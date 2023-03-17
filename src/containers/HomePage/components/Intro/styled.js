@@ -18,18 +18,18 @@ export const IntroWrapper = styled.section`
     font-size: clamp(14px, 5vw, 16px);
     font-weight: 400;
     margin: 0px 0px 20px 4px;
-    color: #64ffda;
+    color: var(--accent);
   }
 
   h3 {
-    color: #8892b0;
+    color: var(--slate);
   }
 
   p {
     font-size: 17px;
     line-height: 1.5;
     font-weight: 400;
-    color: #8892b0;
+    color: var(--slate);
     margin: 30px 0 50px 0;
     max-width: 547px;
 
