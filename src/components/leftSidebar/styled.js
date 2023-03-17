@@ -39,7 +39,7 @@ export const SocialLink = styled.a`
 
   &:hover {
     & > svg {
-      stroke: #64ffda;
+      stroke: var(--accent);
       transform: translateY(-3px);
     }
   }

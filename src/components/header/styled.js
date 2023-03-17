@@ -43,7 +43,7 @@ export const Navigation = styled.nav`
   .burger .burger-lines,
   .burger .burger-lines:after,
   .burger .burger-lines:before {
-    background-color: #64ffda;
+    background-color: var(--accent);
     height: 0.2em;
   }
 `
@@ -96,7 +96,7 @@ export const NavlistItem = styled.li`
     }
 
     & > span {
-      color: #64ffda;
+      color: var(--accent);
       margin-right: 5px;
 
       @media (max-width: 768px) {
@@ -106,7 +106,7 @@ export const NavlistItem = styled.li`
     }
 
     &:hover {
-      color: #64ffda;
+      color: var(--accent);
     }
   }
 `
