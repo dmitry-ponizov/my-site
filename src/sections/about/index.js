@@ -38,8 +38,8 @@ const About = () => {
             </StyledLink>
             . My main focus these days is building accessible, inclusive
             products and digital experiences at{" "}
-            <StyledLink href="https://upstatement.com/">Upstatement</StyledLink>
-            . for a variety of clients.
+            <StyledLink href="https://upstatement.com/">Upstatement</StyledLink>{" "}
+            for a variety of clients.
           </p>
 
           <p>
