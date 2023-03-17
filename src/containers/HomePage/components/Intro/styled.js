@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import { StyledBtn } from "../../components/styledButton/styled"
-
 export const IntroWrapper = styled.section`
   font-family: var(--font-sans);
   font-size: clamp(40px, 8vw, 70px);
@@ -14,7 +12,6 @@ export const IntroWrapper = styled.section`
   width: 100%;
   min-height: 100vh;
   margin: 0px auto;
-  padding-top: 100px;
   max-width: 1000px;
   h1 {
     font-family: var(--font-mono);
@@ -35,14 +32,10 @@ export const IntroWrapper = styled.section`
     color: var(--slate);
     margin: 30px 0 50px 0;
     max-width: 547px;
+
+
     @media (max-width: 480px) {
       font-size: 15px;
     }
   }
-`
-export const IntroButton = styled(StyledBtn)`
-  font-family: var(--font-mono);
-  font-size: 14px;
-  padding: 1.25rem 1.75rem;
-  line-height: 1;
 `

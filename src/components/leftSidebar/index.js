@@ -8,25 +8,28 @@ import TwitterIcon from "../../images/socials/twitter.svg"
 
 import { SocialLink, Socials, SocialsWrapper } from "./styled"
 
-const LeftSidebar = () => {
+const LeftSidebar = ({ data }) => {
   const socialIcons = [
-    { icon: <GithubIcon />, link: "https://github.com/bchiang7" },
-    { icon: <InstagramIcon />, link: "https://www.instagram.com/bchiang7" },
-    { icon: <TwitterIcon />, link: "https://twitter.com/bchiang7" },
-    { icon: <LinkedinIcon />, link: "https://www.linkedin.com/in/bchiang7/" },
-    { icon: <CodepenIcon />, link: "https://codepen.io/bchiang7" },
+    { icon: <GithubIcon />, link: data.githubLink },
+    { icon: <InstagramIcon />, link: data.instagramLink },
+    { icon: <TwitterIcon />, link: data.twitterLink },
+    { icon: <LinkedinIcon />, link: data.linkedinLink },
+    { icon: <CodepenIcon />, link: data.codepenLink },
   ]
 
   return (
     <SocialsWrapper>
       <Socials>
-        {socialIcons.map(({ icon, link }, index) => (
-          <li key={index}>
-            <SocialLink href={link} target="_blank">
-              {icon}
-            </SocialLink>
-          </li>
-        ))}
+        {socialIcons.map(
+          ({ icon, link }, index) =>
+            link && (
+              <li key={index}>
+                <SocialLink href={link} target="_blank">
+                  {icon}
+                </SocialLink>
+              </li>
+            )
+        )}
       </Socials>
     </SocialsWrapper>
   )

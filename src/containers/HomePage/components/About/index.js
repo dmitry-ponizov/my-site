@@ -1,8 +1,7 @@
 import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-import SectionTitle from "../../components/sectionTitle"
-import StyledLink from "../../components/styledLink"
+import SectionTitle from "../../../../components/sectionTitle"
 
 import { AboutWrapper, ContentWrapper, ImageWrapper } from "./styled"
 
@@ -25,28 +24,28 @@ const About = () => {
 
           <p>
             Fast-forward to today, and I’ve had the privilege of working at{" "}
-            <StyledLink href="https://us.mullenlowe.com/">
+            <a href="https://us.mullenlowe.com/">
               an advertising agency
-            </StyledLink>
-            , <StyledLink href="https://starry.com/">a start-up</StyledLink>,{" "}
-            <StyledLink href="https://www.apple.com/">
+            </a>
+            , <a href="https://starry.com/">a start-up</a>,{" "}
+            <a href="https://www.apple.com/">
               a huge corporation
-            </StyledLink>
+            </a>
             , and{" "}
-            <StyledLink href="https://scout.camd.northeastern.edu/">
+            <a href="https://scout.camd.northeastern.edu/">
               a student-led design studio
-            </StyledLink>
+            </a>
             . My main focus these days is building accessible, inclusive
             products and digital experiences at{" "}
-            <StyledLink href="https://upstatement.com/">Upstatement</StyledLink>{" "}
+            <a href="https://upstatement.com/">Upstatement</a>{" "}
             for a variety of clients.
           </p>
 
           <p>
             I also recently{" "}
-            <StyledLink href="https://www.newline.co/courses/build-a-spotify-connected-app">
+            <a href="https://www.newline.co/courses/build-a-spotify-connected-app">
               launched a course
-            </StyledLink>{" "}
+            </a>{" "}
             that covers everything you need to build a web app with the Spotify
             API using Node & React.
           </p>
@@ -64,7 +63,7 @@ const About = () => {
         </div>
 
         <ImageWrapper>
-          <StaticImage src="../../images/me.png" alt="My photo" />
+          <StaticImage src="../../../../images/me.png" alt="My photo" />
         </ImageWrapper>
       </ContentWrapper>
     </AboutWrapper>

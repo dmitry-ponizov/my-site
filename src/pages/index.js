@@ -2,14 +2,11 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import About from "../sections/About"
-import Intro from "../sections/Intro"
+import HomePage from "../containers/HomePage"
 
 const IndexPage = () => (
   <Layout>
-    <Intro />
-
-    <About />
+    <HomePage />
   </Layout>
 )
 

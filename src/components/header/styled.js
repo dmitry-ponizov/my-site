@@ -15,9 +15,14 @@ export const HeaderContainer = styled.header`
   box-shadow: ${props => !props.isTop && "0 10px 30px -10px rgba(2,12,27,0.7)"};
   top: ${props => (props.isScrollDown ? "-100px" : 0)};
 
-  & > svg {
+  a > svg {
     height: 42px;
     width: 42px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
   }
 
   @media (max-width: 1024px) {
