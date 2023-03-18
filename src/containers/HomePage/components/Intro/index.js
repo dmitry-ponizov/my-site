@@ -10,7 +10,6 @@ const Intro = () => {
   const data = useStaticQuery(graphql`
     query {
       mdx(frontmatter: { section: { eq: "intro" } }) {
-        id
         body
         frontmatter {
           buttonLink
