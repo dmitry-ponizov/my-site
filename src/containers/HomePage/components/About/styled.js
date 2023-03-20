@@ -8,7 +8,7 @@ export const AboutWrapper = styled.section`
     padding: 80px 0;
   }
 `
-export const ContentWrapper = styled.div`
+export const Content = styled.div`
   color: var(--slate);
   display: grid;
   grid-template-columns: 3fr 2fr;

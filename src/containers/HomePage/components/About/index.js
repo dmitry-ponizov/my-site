@@ -5,7 +5,7 @@ import parse from "html-react-parser"
 
 import SectionTitle from "../../../../components/sectionTitle"
 
-import { AboutWrapper, ContentWrapper, ImageWrapper } from "./styled"
+import { AboutWrapper, Content, ImageWrapper } from "./styled"
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -38,13 +38,13 @@ const About = () => {
         {aboutTitle}
       </SectionTitle>
 
-      <ContentWrapper>
+      <Content>
         <div>{parse(body)}</div>
 
         <ImageWrapper>
           <GatsbyImage image={introImage} alt="Avatar" />
         </ImageWrapper>
-      </ContentWrapper>
+      </Content>
     </AboutWrapper>
   )
 }
