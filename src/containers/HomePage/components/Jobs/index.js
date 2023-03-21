@@ -1,11 +1,9 @@
 import React from "react"
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs"
+import { Tab, TabPanel } from "react-tabs"
 
 import SectionTitle from "../../../../components/sectionTitle"
 
-import { JobsWrapper, PanelTitle } from "./styled"
-
-import "react-tabs/style/react-tabs.css"
+import { JobsWrapper, PanelTitle, TabsContainer, TabsList } from "./styled"
 
 const Jobs = () => {
   return (
@@ -14,15 +12,15 @@ const Jobs = () => {
         <span>02.</span>Where I’ve Worked
       </SectionTitle>
 
-      <Tabs>
-        <TabList>
+      <TabsContainer>
+        <TabsList>
           <Tab>Upstatement</Tab>
           <Tab>Scout</Tab>
           <Tab>Apple</Tab>
           <Tab>Scout</Tab>
           <Tab>Starry</Tab>
           <Tab>MullenLowe</Tab>
-        </TabList>
+        </TabsList>
 
         <TabPanel>
           <PanelTitle>
@@ -211,7 +209,7 @@ const Jobs = () => {
             </li>
           </ul>
         </TabPanel>
-      </Tabs>
+      </TabsContainer>
     </JobsWrapper>
   )
 }

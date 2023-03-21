@@ -2,10 +2,32 @@ h2 {
   color: #ccd6f6;
 }
 
+p {
+  line-height: 1.5;
+}
+
+section {
+  margin: 0px auto;
+  padding: 100px 0px;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 60px 0;
+  }
+}
+
 .sectionLink {
   display: inline-block;
-  color: #64ffda !important;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  color: var(--color-accent) !important;
+  transition: var(--transition);
 }
 
 .sectionLink::after {
@@ -15,8 +37,8 @@ h2 {
   width: 0px;
   height: 1px;
   bottom: 0.23em;
-  background-color: #64ffda;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  background-color: var(--color-accent);
+  transition: var(--transition);
   opacity: 0.5;
 }
 
@@ -28,10 +50,19 @@ h2 {
   width: 100%;
 }
 
+.sectionText {
+  font-size: 17px;
+}
+
+@media (max-width: 480px) {
+  .sectionText {
+    font-size: 15px;
+  }
+}
+
 .listItem {
-  color: var(--slate);
+  color: var(--color-slate);
   line-height: 1.5;
-  font-size: 15px;
   position: relative;
   padding-left: 30px;
   margin-bottom: 10px;
@@ -43,5 +74,5 @@ h2 {
   left: 0;
   top: 0;
   font-size: 12px;
-  color: var(--accent);
+  color: var(--color-accent);
 }

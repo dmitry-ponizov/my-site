@@ -7,7 +7,7 @@ export const EmailWrapper = styled.div`
   left: auto;
   right: 40px;
   z-index: 10;
-  color: #a8b2d1;
+  color: var(--color-light-slate);
 
   @media (max-width: 1024px) {
     right: 20px;
@@ -26,7 +26,7 @@ export const Email = styled.div`
     content: "";
     width: 1px;
     height: 90px;
-    background-color: #a8b2d1;
+    background-color: var(--color-light-slate);
   }
 `
 
@@ -41,7 +41,7 @@ export const EmailLink = styled.a`
   transition: all 0.2s ease;
 
   &:hover {
-    color: var(--accent);
+    color: var(--color-accent);
     transform: translateY(-3px);
   }
 `

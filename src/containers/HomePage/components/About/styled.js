@@ -2,28 +2,19 @@ import styled from "styled-components"
 
 export const AboutWrapper = styled.section`
   max-width: 900px;
-  margin: 0px auto;
-  padding: 100px 0px;
-  @media (max-width: 768px) {
-    padding: 80px 0;
-  }
 `
 export const ContentWrapper = styled.div`
-  color: var(--slate);
+  color: var(--color-slate);
   display: grid;
   grid-template-columns: 3fr 2fr;
   gap: 50px;
+
   @media (max-width: 768px) {
     display: block;
   }
 
   p {
-    font-size: 17px;
-    line-height: 1.5;
     margin-bottom: 15px;
-    @media (max-width: 480px) {
-      font-size: 15px;
-    }
   }
 
   ul {
@@ -35,14 +26,11 @@ export const ContentWrapper = styled.div`
     li {
       font-family: var(--font-mono);
       font-size: 13px;
-      position: relative;
-      margin-bottom: 10px;
       padding-left: 20px;
+      line-height: 1.3;
+
       &::before {
         content: "▹";
-        position: absolute;
-        left: 0px;
-        color: var(--accent);
         font-size: 14px;
         line-height: 0.86;
       }
@@ -52,7 +40,7 @@ export const ContentWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   position: relative;
-  background-color: var(--accent);
+  background-color: var(--color-accent);
   max-width: 300px;
   border-radius: var(--border-radius);
   align-self: flex-start;
@@ -65,7 +53,7 @@ export const ImageWrapper = styled.div`
     left: 20px;
     width: 100%;
     height: 100%;
-    border: 2px solid var(--accent);
+    border: 2px solid var(--color-accent);
     z-index: -1;
     border-radius: var(--border-radius);
     transition: var(--transition);
@@ -82,6 +70,7 @@ export const ImageWrapper = styled.div`
     mix-blend-mode: multiply;
     filter: grayscale(100%) contrast(1);
     transition: var(--transition);
+
     &:hover {
       filter: none;
       mix-blend-mode: normal;

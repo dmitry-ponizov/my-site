@@ -10,7 +10,7 @@ export const Main = styled.main`
   flex: 1;
   display: flex;
   flex-direction: column;
-  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transition: var(--transition);
   filter: ${props => props.menuActive && "blur(5px) brightness(0.7)"};
   pointer-events: ${props => props.menuActive && "none"};
   padding: 0px 150px;

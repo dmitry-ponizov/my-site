@@ -48,12 +48,12 @@ const About = () => {
           <p>Here are a few technologies I’ve been working with recently:</p>
 
           <ul>
-            <li>JavaScript (ES6+)</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Eleventy</li>
-            <li>Node.js</li>
-            <li>WordPress</li>
+            <li className="listItem">JavaScript (ES6+)</li>
+            <li className="listItem">TypeScript</li>
+            <li className="listItem">React</li>
+            <li className="listItem">Eleventy</li>
+            <li className="listItem">Node.js</li>
+            <li className="listItem">WordPress</li>
           </ul>
         </div>
 
