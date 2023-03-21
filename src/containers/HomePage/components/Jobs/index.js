@@ -11,6 +11,7 @@ const Jobs = () => {
     query {
       mdx(frontmatter: { section: { eq: "jobs" } }) {
         frontmatter {
+          jobsTitle
           tabList
           tabPanels {
             company
@@ -24,13 +25,13 @@ const Jobs = () => {
     }
   `)
 
-  const tabPanels = data.mdx.frontmatter.tabPanels
-  const tabList = data.mdx.frontmatter.tabList
+  const { tabPanels, tabList, jobsTitle } = data.mdx.frontmatter
 
   return (
     <JobsWrapper>
       <SectionTitle>
-        <span>02.</span>Where I’ve Worked
+        <span>02.</span>
+        {jobsTitle}
       </SectionTitle>
 
       <TabsContainer>

@@ -25,9 +25,13 @@ export const IntroWrapper = styled.section`
   }
 
   p {
+    font-size: 17px;
     font-weight: 400;
     color: var(--color-slate);
     margin: 30px 0 50px 0;
     max-width: 547px;
+    @media (max-width: 480px) {
+      font-size: 15px;
+    }
   }
 `

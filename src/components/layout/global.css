@@ -50,16 +50,6 @@ section {
   width: 100%;
 }
 
-.sectionText {
-  font-size: 17px;
-}
-
-@media (max-width: 480px) {
-  .sectionText {
-    font-size: 15px;
-  }
-}
-
 .listItem {
   color: var(--color-slate);
   line-height: 1.5;

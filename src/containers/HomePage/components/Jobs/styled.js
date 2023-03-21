@@ -107,7 +107,7 @@ export const PanelTitle = styled.h3`
     font-weight: 400;
   }
 
-  .sectionLink::after {
+  a::after {
     bottom: 0.15em;
   }
 `

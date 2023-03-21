@@ -14,7 +14,11 @@ export const ContentWrapper = styled.div`
   }
 
   p {
+    font-size: 17px;
     margin-bottom: 15px;
+    @media (max-width: 480px) {
+      font-size: 15px;
+    }
   }
 
   ul {
