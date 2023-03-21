@@ -13,7 +13,7 @@ export const TabsContainer = styled(Tabs)`
   }
 `
 
-export const TabsList = styled(TabList)`
+export const TabsWrapper = styled(TabList)`
   display: flex;
   flex-direction: column;
   margin-right: 25px;
@@ -45,10 +45,11 @@ export const TabsList = styled(TabList)`
 
   li {
     font-family: var(--font-mono);
-    font-size: 14px;
+    font-size: 13px;
     border: none;
     cursor: pointer;
     border-left: 2px solid var(--color-line);
+    outline: none;
     border-radius: 0;
     color: var(--color-slate);
     padding: 12px 20px;
@@ -63,7 +64,7 @@ export const TabsList = styled(TabList)`
       padding: 12px;
     }
 
-    &--selected {
+    &.react-tabs__tab--selected {
       border-left: 2px solid var(--color-accent);
       color: var(--color-accent);
       background-color: var(--color-light-bg);
