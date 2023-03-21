@@ -13,7 +13,7 @@ export const StyledTitle = styled.h2`
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: #233554;
+    background-color: var(--color-line);
     @media (max-width: 1080px) {
       width: 200px;
     }
@@ -26,7 +26,7 @@ export const StyledTitle = styled.h2`
     font-family: var(--font-mono);
     font-size: clamp(16px, 3vw, 21px);
     font-weight: 400;
-    color: var(--accent);
+    color: var(--color-accent);
     margin: 0 10px -5px 0;
   }
 `

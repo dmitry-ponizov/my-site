@@ -48,7 +48,7 @@ export const Navigation = styled.nav`
   .burger .burger-lines,
   .burger .burger-lines:after,
   .burger .burger-lines:before {
-    background-color: var(--accent);
+    background-color: var(--color-accent);
     height: 0.2em;
   }
 `
@@ -74,7 +74,7 @@ export const Navlist = styled.ul`
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: #112240;
+    background-color: var(--color-light-bg);
     box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
     z-index: 10;
     width: min(75vw, 400px);
@@ -101,7 +101,7 @@ export const NavlistItem = styled.li`
     }
 
     & > span {
-      color: var(--accent);
+      color: var(--color-accent);
       margin-right: 5px;
 
       @media (max-width: 768px) {
@@ -111,7 +111,7 @@ export const NavlistItem = styled.li`
     }
 
     &:hover {
-      color: var(--accent);
+      color: var(--color-accent);
     }
   }
 `

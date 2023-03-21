@@ -7,7 +7,7 @@ export const SocialsWrapper = styled.div`
   left: 40px;
   right: auto;
   z-index: 10;
-  color: #a8b2d1;
+  color: var(--color-light-slate);
 
   @media (max-width: 1024px) {
     left: 20px;
@@ -29,7 +29,7 @@ export const Socials = styled.ul`
     width: 1px;
     height: 90px;
     margin-top: 20px;
-    background-color: #a8b2d1;
+    background-color: var(--color-light-slate);
   }
 `
 
@@ -39,7 +39,7 @@ export const SocialLink = styled.a`
 
   &:hover {
     & > svg {
-      stroke: var(--accent);
+      stroke: var(--color-accent);
       transform: translateY(-3px);
     }
   }

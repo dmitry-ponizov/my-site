@@ -40,7 +40,6 @@ const About = () => {
 
       <Content>
         <div>{parse(body)}</div>
-
         <ImageWrapper>
           <GatsbyImage image={introImage} alt="Avatar" />
         </ImageWrapper>
