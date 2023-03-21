@@ -3,7 +3,8 @@ import styled from "styled-components"
 export const AboutWrapper = styled.section`
   max-width: 900px;
 `
-export const ContentWrapper = styled.div`
+
+export const Content = styled.div`
   color: var(--color-slate);
   display: grid;
   grid-template-columns: 3fr 2fr;
