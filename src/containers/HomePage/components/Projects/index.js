@@ -8,15 +8,18 @@ import ExternalIcon from "../../../../images/socials/external.svg"
 import GithubIcon from "../../../../images/socials/github.svg"
 
 import {
-  ListItem,
+  IconsItem,
+  IconsLink,
   ProjectContent,
   ProjectFeatured,
+  ProjectIcons,
   ProjectLink,
-  ProjectList,
   ProjectsWrapper,
   ProjectText,
-  ProjectTitle,
+  TechItem,
   TechList,
+  TitleLink,
+  TitleName,
 } from "./styled"
 
 const Projects = () => {
@@ -27,14 +30,11 @@ const Projects = () => {
         frontmatter {
           projectsItems {
             projectLink
-            title
-            nameLink
             name
             text
             projectLink
             techList
             githubLink
-            externalLink
             projectImg {
               childImageSharp {
                 gatsbyImageData
@@ -58,17 +58,7 @@ const Projects = () => {
 
       {projectsItems.map(
         (
-          {
-            techList,
-            nameLink,
-            name,
-            title,
-            projectLink,
-            text,
-            projectImg,
-            externalLink,
-            githubLink,
-          },
+          { techList, name, projectLink, text, projectImg, githubLink },
           index
         ) => (
           <ProjectFeatured key={index}>
@@ -77,46 +67,50 @@ const Projects = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <GatsbyImage image={getImage(projectImg)} alt="Project" />
+              <GatsbyImage image={getImage(projectImg)} alt={name} />
             </ProjectLink>
 
             <ProjectContent>
-              <ProjectTitle>
-                <span>{title}</span>
-                <a href={nameLink} rel="noopener noreferrer" target="_blank">
+              <h3>
+                <TitleName>Featured Project</TitleName>
+                <TitleLink
+                  href={projectLink}
+                  rel="noopener noreferrer"
+                  target="_blank"
+                >
                   {name}
-                </a>
-              </ProjectTitle>
+                </TitleLink>
+              </h3>
 
               <ProjectText>{parse(text)}</ProjectText>
 
               <TechList>
                 {techList.map((listItem, index) => (
-                  <li key={index}>{listItem}</li>
+                  <TechItem key={index}>{listItem}</TechItem>
                 ))}
               </TechList>
 
-              <ProjectList>
-                <ListItem>
-                  <a
+              <ProjectIcons>
+                <IconsItem>
+                  <IconsLink
                     href={githubLink}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <GithubIcon />
-                  </a>
-                </ListItem>
+                  </IconsLink>
+                </IconsItem>
 
-                <ListItem>
-                  <a
-                    href={externalLink}
+                <IconsItem>
+                  <IconsLink
+                    href={projectLink}
                     rel="noopener noreferrer"
                     target="_blank"
                   >
                     <ExternalIcon />
-                  </a>
-                </ListItem>
-              </ProjectList>
+                  </IconsLink>
+                </IconsItem>
+              </ProjectIcons>
             </ProjectContent>
           </ProjectFeatured>
         )

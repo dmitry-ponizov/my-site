@@ -3,52 +3,64 @@ import styled from "styled-components"
 export const ProjectsWrapper = styled.section`
   max-width: 1000px;
 `
-export const ProjectFeatured = styled.div`
+
+export const ProjectLink = styled.a`
   position: relative;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
+  grid-area: 1 / 6 / -1 / -1;
+  grid-column: 1 / 8;
+  /* border-radius: var(--border-radius); */
 
-  &:not(:last-child) {
-    margin-bottom: 100px;
-
-    @media (max-width: 768px) {
-      margin-bottom: 70px;
-    }
-
-    @media (max-width: 480px) {
-      margin-bottom: 30px;
-    }
+  @media (max-width: 768px) {
+    grid-column: 1 / -1;
+    height: 100%;
+    opacity: 0.25;
   }
 
-  &:nth-child(2n + 1) {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    background: #1f4753;
+    mix-blend-mode: color;
+    transition: var(--transition);
+  }
+
+  /* img {
+    filter: grayscale(100%) contrast(0.8) brightness(90%);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    height: 100%;
+  } */
+
+  div {
+    height: 100%;
+    border-radius: var(--border-radius);
+    filter: grayscale(100%) contrast(0.8) brightness(90%);
+    transition: var(--transition);
+  }
+
+  &:hover {
+    &::before {
+      background: transparent;
+
+      @media (max-width: 768px) {
+        background: #1f4753;
+        box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+      }
+    }
+
     div {
-      grid-area: 1 / 1 / -1 / 7;
-      text-align: left;
-      @media (max-width: 768px) {
-        grid-column: 1 / -1;
-      }
-    }
-
-    a {
-      grid-area: 1 / 6 / -1 / -1;
-      @media (max-width: 768px) {
-        grid-column: 1 / -1;
-      }
-    }
-
-    ul {
-      justify-content: flex-start;
-      li {
-        margin: 0 20px 5px 0;
-      }
+      filter: none;
     }
   }
 `
 
 export const ProjectContent = styled.div`
-  position: relative;
   text-align: right;
   grid-area: 1 / 1 / -1 / 7;
   grid-column: 7 / -1;
@@ -67,38 +79,38 @@ export const ProjectContent = styled.div`
     padding: 25px 25px 20px;
   }
 `
-export const ProjectTitle = styled.h3`
-  span {
-    display: block;
-    margin: 10px 0px;
-    color: var(--color-accent);
-    font-family: var(--font-mono);
-    font-size: 13px;
+
+export const TitleName = styled.span`
+  display: block;
+  margin: 10px 0px;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+`
+
+export const TitleLink = styled.a`
+  font-size: clamp(24px, 5vw, 28px);
+  color: #ccd6f6 !important;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+  transition: var(--transition);
+
+  &:hover {
+    color: var(--color-accent) !important;
   }
 
-  a {
-    font-size: clamp(24px, 5vw, 28px);
-    color: #ccd6f6 !important;
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
-    transition: var(--transition);
-
-    &:hover {
-      color: var(--color-accent) !important;
-    }
-
-    @media (max-width: 768px) {
-      margin-bottom: 10px;
-    }
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
   }
 `
 
 export const ProjectText = styled.div`
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   position: relative;
+  right: 0;
   z-index: 5;
   padding: 25px;
   border-radius: var(--border-radius);
@@ -131,21 +143,21 @@ export const TechList = styled.ul`
   @media (max-width: 768px) {
     justify-content: flex-start;
   }
+`
 
-  li {
-    color: var(--color-light-slate);
-    font-family: var(--font-mono);
-    font-size: 13px;
-    white-space: nowrap;
-    margin: 0 0 5px 20px;
+export const TechItem = styled.li`
+  color: var(--color-light-slate);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  white-space: nowrap;
+  margin: 0 0 5px 20px;
 
-    @media (max-width: 768px) {
-      margin: 0 10px 5px 0;
-    }
+  @media (max-width: 768px) {
+    margin: 0 10px 5px 0;
   }
 `
 
-export const ProjectList = styled.ul`
+export const ProjectIcons = styled.ul`
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -156,68 +168,68 @@ export const ProjectList = styled.ul`
     justify-content: flex-start;
   }
 `
-
-export const ListItem = styled.li`
-  margin: 0 0 0 20px;
-
-  &:last-child {
-    a {
-      width: 24px;
-    }
+export const IconsItem = styled.li`
+  &:first-child {
+    margin-right: 20px;
   }
+`
+export const IconsLink = styled.a`
+  width: 20px;
 
-  a {
-    width: 20px;
-    &:hover {
-      svg {
-        stroke: var(--color-accent);
-      }
+  &:hover {
+    svg {
+      stroke: var(--color-accent);
     }
   }
 `
 
-export const ProjectLink = styled.a`
-  background: var(--color-accent);
-  border-radius: var(--border-radius);
+export const ProjectFeatured = styled.div`
   position: relative;
-  grid-area: 1 / 6 / -1 / -1;
-  grid-column: 1 / 8;
-  cursor: pointer;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
 
-  @media (max-width: 768px) {
-    grid-column: 1 / -1;
-    height: 100%;
-    opacity: 0.25;
-  }
+  &:not(:last-child) {
+    margin-bottom: 100px;
 
-  &::before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    z-index: 3;
-    background: #0a192f;
-    mix-blend-mode: screen;
-  }
-
-  &:hover {
-    background: transparent;
-    outline: 0px;
-
-    &::before {
-      background: transparent;
+    @media (max-width: 768px) {
+      margin-bottom: 70px;
     }
 
-    div {
-      filter: none;
-      mix-blend-mode: normal;
+    @media (max-width: 480px) {
+      margin-bottom: 30px;
     }
   }
 
-  div {
-    border-radius: var(--border-radius);
-    mix-blend-mode: multiply;
-    filter: grayscale(100%) contrast(1) brightness(90%);
-    height: 100%;
+  &:nth-child(2n + 1) {
+    ${ProjectLink} {
+      grid-area: 1 / 6 / -1 / -1;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    ${ProjectContent} {
+      grid-area: 1 / 1 / -1 / 7;
+      text-align: left;
+
+      @media (max-width: 768px) {
+        grid-column: 1 / -1;
+      }
+
+      ${TechList} {
+        justify-content: flex-start;
+
+        ${TechItem} {
+          margin: 0 20px 5px 0;
+        }
+      }
+
+      ${ProjectIcons} {
+        justify-content: flex-start;
+      }
+    }
   }
 `
