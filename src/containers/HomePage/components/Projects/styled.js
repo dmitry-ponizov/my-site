@@ -8,7 +8,7 @@ export const ProjectLink = styled.a`
   position: relative;
   grid-area: 1 / 6 / -1 / -1;
   grid-column: 1 / 8;
-  /* border-radius: var(--border-radius); */
+  border-radius: var(--border-radius);
 
   @media (max-width: 768px) {
     grid-column: 1 / -1;
@@ -30,18 +30,14 @@ export const ProjectLink = styled.a`
     transition: var(--transition);
   }
 
-  /* img {
-    filter: grayscale(100%) contrast(0.8) brightness(90%);
-    border-radius: var(--border-radius);
-    transition: var(--transition);
+  & > * {
     height: 100%;
-  } */
+  }
 
-  div {
-    height: 100%;
-    border-radius: var(--border-radius);
+  img {
     filter: grayscale(100%) contrast(0.8) brightness(90%);
-    transition: var(--transition);
+    border-radius: var(--border-radius);
+    height: 100%;
   }
 
   &:hover {
@@ -50,12 +46,16 @@ export const ProjectLink = styled.a`
 
       @media (max-width: 768px) {
         background: #1f4753;
-        box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+        box-shadow: 0 10px 30px -15px var(--color-box-shadow);
       }
     }
 
-    div {
+    img {
       filter: none;
+
+      @media (max-width: 768px) {
+        filter: grayscale(100%) contrast(0.8) brightness(90%);
+      }
     }
   }
 `
@@ -108,7 +108,7 @@ export const TitleLink = styled.a`
 `
 
 export const ProjectText = styled.div`
-  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  box-shadow: 0 10px 30px -15px var(--color-box-shadow);
   position: relative;
   right: 0;
   z-index: 5;
@@ -117,6 +117,13 @@ export const ProjectText = styled.div`
   background-color: var(--color-light-bg);
   color: var(--color-light-slate);
   font-size: 15px;
+  &:hover {
+    box-shadow: 0 20px 30px -15px var(--color-box-shadow);
+
+    @media (max-width: 768px) {
+      box-shadow: none;
+    }
+  }
 
   @media (max-width: 768px) {
     padding: 20px 0px;
@@ -162,19 +169,23 @@ export const ProjectIcons = styled.ul`
   justify-content: flex-end;
   align-items: center;
   margin-top: 20px;
+  position: relative;
 
   @media (max-width: 768px) {
     margin-top: 10px;
     justify-content: flex-start;
   }
 `
+
 export const IconsItem = styled.li`
   &:first-child {
     margin-right: 20px;
   }
 `
+
 export const IconsLink = styled.a`
   width: 20px;
+  transition: var(--transition);
 
   &:hover {
     svg {
