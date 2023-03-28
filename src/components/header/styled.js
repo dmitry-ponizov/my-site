@@ -75,7 +75,7 @@ export const Navlist = styled.ul`
     bottom: 0;
     right: 0;
     background-color: var(--color-light-bg);
-    box-shadow: -10px 0px 30px -15px rgba(2, 12, 27, 0.7);
+    box-shadow: -10px 0px 30px -15px var(--color-box-shadow);
     z-index: 10;
     width: min(75vw, 400px);
     height: 100vh;
