@@ -10,22 +10,18 @@ import GithubIcon from "../../../../images/socials/github.svg"
 import {
   ContentLink,
   ContentText,
+  IconsList,
+  IconsListLink,
   OtherProjectsIcons,
   OtherProjectsItem,
   OtherProjectsItems,
   OtherProjectsList,
   OtherProjectsTitle,
   OtherProjectsWrapper,
-  ProjectsIconsList,
   ProjectsListItem,
 } from "./style"
 
 const OtherProjects = () => {
-  // const iconsLinks = [
-  //   { icon: <GithubIcon />, link: data.githubLink },
-  //   { icon: <ExternalIcon />, link: data.externalLink },
-  // ]
-
   const data = useStaticQuery(graphql`
     query {
       mdx(frontmatter: { section: { eq: "otherProjects" } }) {
@@ -79,27 +75,31 @@ const OtherProjects = () => {
               <OtherProjectsIcons>
                 <FolderIcon />
 
-                <ProjectsIconsList>
-                  <li>
-                    <a
-                      href={githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GithubIcon />
-                    </a>
-                  </li>
+                <IconsList>
+                  {githubLink && (
+                    <li>
+                      <IconsListLink
+                        href={githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <GithubIcon />
+                      </IconsListLink>
+                    </li>
+                  )}
 
-                  <li>
-                    <a
-                      href={externalLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalIcon />
-                    </a>
-                  </li>
-                </ProjectsIconsList>
+                  {externalLink && (
+                    <li>
+                      <IconsListLink
+                        href={externalLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalIcon />
+                      </IconsListLink>
+                    </li>
+                  )}
+                </IconsList>
               </OtherProjectsIcons>
 
               <div>

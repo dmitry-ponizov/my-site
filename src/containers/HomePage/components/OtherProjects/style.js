@@ -36,6 +36,7 @@ export const OtherProjectsItems = styled.ul`
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 `
+
 export const ContentLink = styled.a`
   position: static;
   margin: 0px 0px 10px;
@@ -60,9 +61,6 @@ export const OtherProjectsItem = styled.li`
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  /* align-items: flex-start;
-  position: relative;
-  height: 100%; */
   position: relative;
   padding: 2rem 1.75rem;
   border-radius: var(--border-radius);
@@ -85,15 +83,36 @@ export const OtherProjectsIcons = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 35px;
+
   svg {
     width: 40px;
   }
 `
+
+export const IconsList = styled.ul`
+  position: relative;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+`
+
+export const IconsListLink = styled.a`
+  width: 20px;
+  margin-left: 14px;
+
+  svg {
+    stroke: var(--color-slate);
+    transition: var(--transition);
+
+    &:hover {
+      stroke: var(--color-accent);
+    }
+  }
+`
+
 export const ContentText = styled.p`
   color: var(--color-light-slate);
 `
-
-export const ProjectsIconsList = styled.ul``
 
 export const OtherProjectsList = styled.ul`
   display: flex;
@@ -102,6 +121,7 @@ export const OtherProjectsList = styled.ul`
   flex-wrap: wrap;
   margin: 20px 0px 0px;
 `
+
 export const ProjectsListItem = styled.li`
   font-family: var(--font-mono);
   font-size: 12px;
