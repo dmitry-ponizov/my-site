@@ -26,11 +26,6 @@ export const OtherProjectsItems = styled.ul`
   position: relative;
   margin-bottom: 80px;
 
-  & ~ button {
-    display: block;
-    margin: 0 auto;
-  }
-
   @media (max-width: 1080px) {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
