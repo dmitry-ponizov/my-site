@@ -1,26 +1,11 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import parse from "html-react-parser"
 
 import SectionTitle from "../../../../components/sectionTitle"
-import ExternalIcon from "../../../../images/socials/external.svg"
-import GithubIcon from "../../../../images/socials/github.svg"
 
-import {
-  IconsItem,
-  IconsLink,
-  ProjectContent,
-  ProjectFeatured,
-  ProjectIcons,
-  ProjectLink,
-  ProjectsWrapper,
-  ProjectText,
-  TechItem,
-  TechList,
-  TitleLink,
-  TitleName,
-} from "./styled"
+import ProjectsContent from "./components/ProjectsContent"
+import { ProjectFeatured, ProjectLink, ProjectsWrapper } from "./styled"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -57,10 +42,7 @@ const Projects = () => {
       </SectionTitle>
 
       {projectsItems.map(
-        (
-          { techList, name, projectLink, text, projectImg, githubLink },
-          index
-        ) => (
+        ({ name, projectLink, projectImg, ...projectsContent }, index) => (
           <ProjectFeatured key={index}>
             <ProjectLink
               href={projectLink}
@@ -70,48 +52,7 @@ const Projects = () => {
               <GatsbyImage image={getImage(projectImg)} alt={name} />
             </ProjectLink>
 
-            <ProjectContent>
-              <h3>
-                <TitleName>Featured Project</TitleName>
-                <TitleLink
-                  href={projectLink}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {name}
-                </TitleLink>
-              </h3>
-
-              <ProjectText>{parse(text)}</ProjectText>
-
-              <TechList>
-                {techList.map((listItem, index) => (
-                  <TechItem key={index}>{listItem}</TechItem>
-                ))}
-              </TechList>
-
-              <ProjectIcons>
-                <IconsItem>
-                  <IconsLink
-                    href={githubLink}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <GithubIcon />
-                  </IconsLink>
-                </IconsItem>
-
-                <IconsItem>
-                  <IconsLink
-                    href={projectLink}
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    <ExternalIcon />
-                  </IconsLink>
-                </IconsItem>
-              </ProjectIcons>
-            </ProjectContent>
+            <ProjectsContent {...projectsContent} />
           </ProjectFeatured>
         )
       )}
