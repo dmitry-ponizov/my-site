@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import parse from "html-react-parser"
 
 import StyledButton from "../../../../components/styledButton"
@@ -8,31 +8,27 @@ import ExternalIcon from "../../../../images/socials/external.svg"
 import GithubIcon from "../../../../images/socials/github.svg"
 
 import {
-  ContentLink,
-  ContentText,
   IconsList,
   IconsListLink,
   OtherProjectsIcons,
   OtherProjectsItem,
   OtherProjectsItems,
+  OtherProjectsLink,
   OtherProjectsList,
+  OtherProjectsText,
   OtherProjectsTitle,
   OtherProjectsWrapper,
   ProjectsListItem,
-} from "./style"
+} from "./styled"
 
 const OtherProjects = () => {
   const data = useStaticQuery(graphql`
     query {
       mdx(frontmatter: { section: { eq: "otherProjects" } }) {
         frontmatter {
-          otherProjectsSubtitle
           otherProjectsTitle
-          projectsButtonText
-          projectsButtonLink
           otherProjectsCards {
             githubLink
-            externalLink
             description
             cardsLink
             cardsList
@@ -43,34 +39,15 @@ const OtherProjects = () => {
     }
   `)
 
-  const {
-    otherProjectsTitle,
-    otherProjectsSubtitle,
-    projectsButtonText,
-    projectsButtonLink,
-    otherProjectsCards,
-  } = data.mdx.frontmatter
+  const { otherProjectsTitle, otherProjectsCards } = data.mdx.frontmatter
 
   return (
     <OtherProjectsWrapper>
-      <OtherProjectsTitle>
-        {otherProjectsTitle}
-        <Link to="/archive">{parse(otherProjectsSubtitle)}</Link>
-      </OtherProjectsTitle>
+      <OtherProjectsTitle>{otherProjectsTitle}</OtherProjectsTitle>
 
       <OtherProjectsItems>
         {otherProjectsCards.map(
-          (
-            {
-              description,
-              cardsLink,
-              cardsList,
-              title,
-              githubLink,
-              externalLink,
-            },
-            index
-          ) => (
+          ({ description, cardsLink, cardsList, title, githubLink }, index) => (
             <OtherProjectsItem key={index}>
               <OtherProjectsIcons>
                 <FolderIcon />
@@ -88,10 +65,10 @@ const OtherProjects = () => {
                     </li>
                   )}
 
-                  {externalLink && (
+                  {cardsLink && (
                     <li>
                       <IconsListLink
-                        href={externalLink}
+                        href={cardsLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -102,17 +79,15 @@ const OtherProjects = () => {
                 </IconsList>
               </OtherProjectsIcons>
 
-              <div>
-                <ContentLink
-                  href={cardsLink}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {title}
-                </ContentLink>
+              <OtherProjectsLink
+                href={cardsLink}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                {title}
+              </OtherProjectsLink>
 
-                <ContentText>{parse(description)}</ContentText>
-              </div>
+              <OtherProjectsText>{parse(description)}</OtherProjectsText>
 
               <OtherProjectsList>
                 {cardsList.map((cardItem, index) => (
@@ -124,11 +99,7 @@ const OtherProjects = () => {
         )}
       </OtherProjectsItems>
 
-      <StyledButton
-        bigVariant
-        link={projectsButtonLink}
-        text={projectsButtonText}
-      />
+      <StyledButton bigVariant text="Show More" />
     </OtherProjectsWrapper>
   )
 }

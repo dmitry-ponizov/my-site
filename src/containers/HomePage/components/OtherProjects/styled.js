@@ -11,12 +11,6 @@ export const OtherProjectsTitle = styled.h3`
   text-align: center;
   display: flex;
   flex-direction: column;
-
-  p {
-    font-family: var(--font-mono);
-    font-size: 14px;
-    font-weight: 400;
-  }
 `
 
 export const OtherProjectsItems = styled.ul`
@@ -37,7 +31,7 @@ export const OtherProjectsItems = styled.ul`
   }
 `
 
-export const ContentLink = styled.a`
+export const OtherProjectsLink = styled.a`
   position: static;
   margin: 0px 0px 10px;
   color: #ccd6f6;
@@ -59,7 +53,6 @@ export const ContentLink = styled.a`
 export const OtherProjectsItem = styled.li`
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   position: relative;
   padding: 2rem 1.75rem;
@@ -72,7 +65,7 @@ export const OtherProjectsItem = styled.li`
     transform: translateY(-7px);
     box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
 
-    ${ContentLink} {
+    ${OtherProjectsLink} {
       color: var(--color-accent);
     }
   }
@@ -90,7 +83,6 @@ export const OtherProjectsIcons = styled.div`
 `
 
 export const IconsList = styled.ul`
-  position: relative;
   z-index: 5;
   display: flex;
   align-items: center;
@@ -110,8 +102,9 @@ export const IconsListLink = styled.a`
   }
 `
 
-export const ContentText = styled.p`
+export const OtherProjectsText = styled.p`
   color: var(--color-light-slate);
+  position: relative;
 `
 
 export const OtherProjectsList = styled.ul`
