@@ -1,7 +1,5 @@
 import styled from "styled-components"
 
-import { ProjectLink } from "../../styled"
-
 export const ProjectContent = styled.div`
   text-align: right;
   grid-area: 1 / 1 / -1 / 7;
@@ -103,56 +101,5 @@ export const TechItem = styled.li`
 
   @media (max-width: 768px) {
     margin: 0 10px 5px 0;
-  }
-`
-
-export const ProjectFeatured = styled.div`
-  position: relative;
-  display: grid;
-  gap: 10px;
-  grid-template-columns: repeat(12, 1fr);
-  align-items: center;
-
-  &:not(:last-child) {
-    margin-bottom: 100px;
-
-    @media (max-width: 768px) {
-      margin-bottom: 70px;
-    }
-
-    @media (max-width: 480px) {
-      margin-bottom: 30px;
-    }
-  }
-
-  &:nth-child(2n + 1) {
-    ${ProjectLink} {
-      grid-area: 1 / 6 / -1 / -1;
-
-      @media (max-width: 768px) {
-        grid-column: 1 / -1;
-      }
-    }
-
-    ${ProjectContent} {
-      grid-area: 1 / 1 / -1 / 7;
-      text-align: left;
-
-      @media (max-width: 768px) {
-        grid-column: 1 / -1;
-      }
-
-      ${TechList} {
-        justify-content: flex-start;
-
-        ${TechItem} {
-          margin: 0 20px 5px 0;
-        }
-      }
-
-      ul {
-        justify-content: flex-start;
-      }
-    }
   }
 `
