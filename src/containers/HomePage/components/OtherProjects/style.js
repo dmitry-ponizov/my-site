@@ -2,11 +2,6 @@ import styled from "styled-components"
 
 export const OtherProjectsWrapper = styled.section`
   max-width: 1000px;
-
-  /* p {
-    display: flex;
-    justify-content: center;
-  } */
 `
 
 export const OtherProjectsTitle = styled.h3`
@@ -16,6 +11,12 @@ export const OtherProjectsTitle = styled.h3`
   text-align: center;
   display: flex;
   flex-direction: column;
+
+  p {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 400;
+  }
 `
 
 export const OtherProjectsItems = styled.ul`
@@ -24,14 +25,25 @@ export const OtherProjectsItems = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 15px;
   position: relative;
+  margin-bottom: 80px;
+
+  & ~ button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 1080px) {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
 `
 export const ContentLink = styled.a`
   position: static;
   margin: 0px 0px 10px;
   color: #ccd6f6;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 700;
-  /* &::before {
+
+  &::before {
     content: "";
     display: block;
     position: absolute;
@@ -40,7 +52,7 @@ export const ContentLink = styled.a`
     height: 100%;
     top: 0px;
     left: 0px;
-  } */
+  }
 `
 
 export const OtherProjectsItem = styled.li`
@@ -51,6 +63,7 @@ export const OtherProjectsItem = styled.li`
   /* align-items: flex-start;
   position: relative;
   height: 100%; */
+  position: relative;
   padding: 2rem 1.75rem;
   border-radius: var(--border-radius);
   background-color: var(--color-light-bg);
@@ -59,6 +72,8 @@ export const OtherProjectsItem = styled.li`
 
   &:hover {
     transform: translateY(-7px);
+    box-shadow: 0 20px 30px -15px rgba(2, 12, 27, 0.7);
+
     ${ContentLink} {
       color: var(--color-accent);
     }
@@ -74,12 +89,12 @@ export const OtherProjectsIcons = styled.div`
     width: 40px;
   }
 `
-
-export const OtherProjectsContent = styled.div``
-
 export const ContentText = styled.p`
   color: var(--color-light-slate);
 `
+
+export const ProjectsIconsList = styled.ul``
+
 export const OtherProjectsList = styled.ul`
   display: flex;
   align-items: flex-end;
@@ -92,6 +107,7 @@ export const ProjectsListItem = styled.li`
   font-size: 12px;
   line-height: 1.75;
   color: var(--color-slate);
+
   &:not(:last-child) {
     margin-right: 15px;
   }
