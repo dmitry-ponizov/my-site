@@ -1,24 +1,13 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import parse from "html-react-parser"
 
 import StyledButton from "../../../../components/styledButton"
-import FolderIcon from "../../../../images/folder.svg"
-import ExternalIcon from "../../../../images/socials/external.svg"
-import GithubIcon from "../../../../images/socials/github.svg"
 
+import OtherProjectsItem from "./components/OtherProjectsItem"
 import {
-  IconsList,
-  IconsListLink,
-  OtherProjectsIcons,
-  OtherProjectsItem,
   OtherProjectsItems,
-  OtherProjectsLink,
-  OtherProjectsText,
   OtherProjectsTitle,
   OtherProjectsWrapper,
-  TechnologiesList,
-  TechnologiesListItem,
 } from "./styled"
 
 const OtherProjects = () => {
@@ -56,62 +45,9 @@ const OtherProjects = () => {
       <OtherProjectsItems>
         {otherProjectsCards
           .slice(0, showProjects)
-          .map(
-            (
-              { description, cardsLink, cardsList, title, githubLink },
-              index
-            ) => (
-              <OtherProjectsItem key={index}>
-                <OtherProjectsIcons>
-                  <FolderIcon />
-
-                  <IconsList>
-                    {githubLink && (
-                      <li>
-                        <IconsListLink
-                          href={githubLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <GithubIcon />
-                        </IconsListLink>
-                      </li>
-                    )}
-
-                    {cardsLink && (
-                      <li>
-                        <IconsListLink
-                          href={cardsLink}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalIcon />
-                        </IconsListLink>
-                      </li>
-                    )}
-                  </IconsList>
-                </OtherProjectsIcons>
-
-                <OtherProjectsLink
-                  href={cardsLink}
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  {title}
-                </OtherProjectsLink>
-
-                <OtherProjectsText>{parse(description)}</OtherProjectsText>
-
-                <TechnologiesList>
-                  {cardsList.map((techItem, index) => (
-                    <TechnologiesListItem key={index}>
-                      {techItem}
-                    </TechnologiesListItem>
-                  ))}
-                </TechnologiesList>
-              </OtherProjectsItem>
-            )
-          )}
+          .map(({ ...otherProjectsItem }, index) => (
+            <OtherProjectsItem key={index} {...otherProjectsItem} />
+          ))}
       </OtherProjectsItems>
 
       <StyledButton

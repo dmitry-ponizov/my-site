@@ -57,6 +57,7 @@ export const ProjectText = styled.div`
   background-color: var(--color-light-bg);
   color: var(--color-light-slate);
   font-size: 15px;
+  transition: var(--transition);
   &:hover {
     box-shadow: 0 20px 30px -15px var(--color-box-shadow);
 
