@@ -14,11 +14,11 @@ import {
   OtherProjectsItem,
   OtherProjectsItems,
   OtherProjectsLink,
-  OtherProjectsList,
   OtherProjectsText,
   OtherProjectsTitle,
   OtherProjectsWrapper,
-  ProjectsListItem,
+  TechnologiesList,
+  TechnologiesListItem,
 } from "./styled"
 
 const OtherProjects = () => {
@@ -89,11 +89,13 @@ const OtherProjects = () => {
 
               <OtherProjectsText>{parse(description)}</OtherProjectsText>
 
-              <OtherProjectsList>
-                {cardsList.map((cardItem, index) => (
-                  <ProjectsListItem key={index}>{cardItem}</ProjectsListItem>
+              <TechnologiesList>
+                {cardsList.map((techItem, index) => (
+                  <TechnologiesListItem key={index}>
+                    {techItem}
+                  </TechnologiesListItem>
                 ))}
-              </OtherProjectsList>
+              </TechnologiesList>
             </OtherProjectsItem>
           )
         )}

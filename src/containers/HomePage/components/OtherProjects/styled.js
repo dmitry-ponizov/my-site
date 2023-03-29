@@ -2,6 +2,11 @@ import styled from "styled-components"
 
 export const OtherProjectsWrapper = styled.section`
   max-width: 1000px;
+
+  button {
+    display: block;
+    margin: 0 auto;
+  }
 `
 
 export const OtherProjectsTitle = styled.h3`
@@ -102,12 +107,14 @@ export const IconsListLink = styled.a`
   }
 `
 
-export const OtherProjectsText = styled.p`
-  color: var(--color-light-slate);
-  position: relative;
+export const OtherProjectsText = styled.div`
+  p {
+    color: var(--color-light-slate);
+    position: relative;
+  }
 `
 
-export const OtherProjectsList = styled.ul`
+export const TechnologiesList = styled.ul`
   display: flex;
   align-items: flex-end;
   flex-grow: 1;
@@ -115,7 +122,7 @@ export const OtherProjectsList = styled.ul`
   margin: 20px 0px 0px;
 `
 
-export const ProjectsListItem = styled.li`
+export const TechnologiesListItem = styled.li`
   font-family: var(--font-mono);
   font-size: 12px;
   line-height: 1.75;
