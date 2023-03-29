@@ -1,12 +1,19 @@
 import React from "react"
+import { Link } from "gatsby"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const NotFoundPage = () => (
   <Layout>
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <h1
+      style={{ paddingTop: "300px", fontSize: "32px", paddingBottom: "15px" }}
+    >
+      404: Not Found
+    </h1>
+    <Link style={{ color: "#64ffda" }} to="/">
+      Go back to Home Page
+    </Link>
   </Layout>
 )
 

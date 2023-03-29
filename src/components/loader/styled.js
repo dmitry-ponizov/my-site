@@ -5,7 +5,6 @@ export const LoaderWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: fixed;
-  inset: 0px;
   width: 100vw;
   height: 100vh;
   background-color: #020c1b;

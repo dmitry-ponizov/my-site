@@ -47,6 +47,7 @@ const Loader = () => {
                   </tspan>
                 </text>
               </Tween>
+
               <Tween
                 duration={1.5}
                 ease="Power2.easeInOut"
