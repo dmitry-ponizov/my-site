@@ -1,14 +1,14 @@
 import styled from "styled-components"
 
 export const IntroWrapper = styled.section`
-  font-size: clamp(40px, 8vw, 70px);
+  font-size: clamp(30px, 8vw, 70px);
   font-weight: 700;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding: 0;
+  padding: 100px 0 0 0;
   min-height: 100vh;
   max-width: 1000px;
 

@@ -1,11 +1,13 @@
 import React from "react"
 
-import { FooterContainer } from "./styled"
+import { FooterContainer, FooterLink } from "./styled"
 
-const Footer = ({ menuActive }) => {
+const Footer = ({ menuActive, footerLink, footerText }) => {
   return (
-    <FooterContainer style={{textAlign: 'center'}} menuActive={menuActive} id="footer">
-      © {new Date().getFullYear()} &middot; Footer
+    <FooterContainer menuActive={menuActive} id="footer">
+      <FooterLink href={footerLink} rel="noopener noreferrer" target="_blank">
+        {footerText}
+      </FooterLink>
     </FooterContainer>
   )
 }

@@ -4,7 +4,7 @@ export const StyledTitle = styled.h2`
   display: flex;
   align-items: center;
   margin: 10px 0px 40px;
-  font-size: clamp(26px, 5vw, 28px);
+  font-size: clamp(21px, 5vw, 28px);
   font-weight: 700;
   white-space: nowrap;
 
