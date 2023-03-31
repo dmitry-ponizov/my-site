@@ -1,17 +1,23 @@
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import parse from "html-react-parser"
 
 import StyledButton from "../../../../components/styledButton"
 
-import { ContactWrapper } from "./styled"
+import {
+  ContactText,
+  ContactTitle,
+  ContactWrapper,
+  СontactNumberTitle,
+} from "./styled"
 
 const Contact = () => {
   const data = useStaticQuery(graphql`
     query {
       mdx(frontmatter: { section: { eq: "contact" } }) {
-        body
         frontmatter {
+          numberTitle
+          contactTitle
+          contactText
           contactButtonLink
           contactButtonText
         }
@@ -20,13 +26,22 @@ const Contact = () => {
   `)
 
   const {
-    body,
-    frontmatter: { contactButtonLink, contactButtonText },
+    frontmatter: {
+      numberTitle,
+      contactTitle,
+      contactText,
+      contactButtonLink,
+      contactButtonText,
+    },
   } = data.mdx
 
   return (
     <ContactWrapper>
-      {parse(body)}
+      <СontactNumberTitle>{numberTitle}</СontactNumberTitle>
+
+      <ContactTitle>{contactTitle}</ContactTitle>
+
+      <ContactText>{contactText}</ContactText>
 
       <StyledButton
         bigVariant

@@ -14,7 +14,11 @@ export const SocialsWrapper = styled.div`
   }
 
   @media (max-width: 768px) {
-    display: none;
+    width: 100%;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `
 
@@ -30,6 +34,17 @@ export const Socials = styled.ul`
     height: 90px;
     margin-top: 20px;
     background-color: var(--color-light-slate);
+  }
+
+  @media (max-width: 768px) {
+    max-width: 270px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    &::after {
+      display: none;
+    }
   }
 `
 

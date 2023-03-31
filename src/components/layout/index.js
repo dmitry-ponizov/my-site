@@ -39,6 +39,12 @@ const Layout = ({ children }) => {
           email
         }
       }
+      footer: mdx(frontmatter: { type: { eq: "footer" } }) {
+        frontmatter {
+          footerLink
+          footerText
+        }
+      }
     }
   `)
 
@@ -56,6 +62,8 @@ const Layout = ({ children }) => {
 
   const sidebarEmail = data.sidebars.frontmatter.email
 
+  const { footerLink, footerText } = data.footer.frontmatter
+
   return (
     <Wrapper>
       <Header
@@ -71,7 +79,11 @@ const Layout = ({ children }) => {
 
       <Main menuActive={menuActive}>{children}</Main>
 
-      <Footer menuActive={menuActive} />
+      <Footer
+        menuActive={menuActive}
+        footerLink={footerLink}
+        footerText={footerText}
+      />
     </Wrapper>
   )
 }
