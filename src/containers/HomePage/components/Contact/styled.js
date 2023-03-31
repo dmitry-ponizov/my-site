@@ -20,6 +20,7 @@ export const СontactNumberTitle = styled.p`
   font-family: var(--font-mono);
   font-size: 16px;
 `
+
 export const ContactTitle = styled.h2`
   font-size: clamp(35px, 5vw, 53px);
   margin-bottom: 10px;

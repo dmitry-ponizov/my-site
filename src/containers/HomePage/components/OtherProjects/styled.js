@@ -10,7 +10,7 @@ export const OtherProjectsWrapper = styled.section`
 `
 
 export const OtherProjectsTitle = styled.h3`
-  font-size: clamp(26px, 5vw, 28px);
+  font-size: clamp(21px, 5vw, 28px);
   font-weight: 700;
   white-space: nowrap;
   text-align: center;
