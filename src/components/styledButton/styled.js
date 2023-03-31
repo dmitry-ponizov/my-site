@@ -14,8 +14,8 @@ export const StyledBtn = styled.button`
     background-color: rgba(100, 255, 218, 0.1);
   }
 
-  ${({ withLink, bigVariant }) => {
-    const padding = withLink ? "0" : bigVariant ? "20px 28px" : "11px 16px"
+  ${({ link, bigVariant }) => {
+    const padding = link ? "0" : bigVariant ? "20px 28px" : "11px 16px"
     const fontSize = bigVariant ? "14px" : "13px"
     const linkPadding = bigVariant ? "20px 28px" : "11px 16px"
 

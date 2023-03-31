@@ -18,9 +18,11 @@ const Header = ({ menuActive, setMenuActive, data }) => {
 
   return (
     <HeaderContainer isTop={isTop} isScrollDown={isScrollDown}>
-      <AnchorLink to="#intro">
-        <HeaderLogo data-aos="fade-down" data-aos-duration="800" />
-      </AnchorLink>
+      <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+        <AnchorLink to="#intro">
+          <HeaderLogo />
+        </AnchorLink>
+      </div>
 
       <Navigation
         data-aos="fade-down"
