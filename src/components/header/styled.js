@@ -60,10 +60,19 @@ export const Navlist = styled.ul`
 
   & > button {
     font-size: 14px;
+    line-height: 1;
+    font-family: var(--font-mono);
+
+    a {
+      padding: 18px 50px;
+    }
 
     @media (max-width: 768px) {
-      padding: 18px 50px;
       margin-top: 40px;
+    }
+
+    @media (max-width: 320px) {
+      margin-top: 25px;
     }
   }
 
@@ -97,7 +106,7 @@ export const NavlistItem = styled.li`
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-size: 18px;
+      font-size: clamp(14px, 4vw, 18px);
     }
 
     & > span {
@@ -105,7 +114,7 @@ export const NavlistItem = styled.li`
       margin-right: 5px;
 
       @media (max-width: 768px) {
-        font-size: 15px;
+        font-size: 14px;
         margin: 0 0 8px 0;
       }
     }
