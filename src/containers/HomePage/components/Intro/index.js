@@ -25,7 +25,13 @@ const Intro = () => {
   } = data.mdx
 
   return (
-    <IntroWrapper id="intro">
+    <IntroWrapper
+      id="intro"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-once="true"
+      data-aos-delay="1000"
+    >
       {parse(body)}
 
       <StyledButton bigVariant link={buttonLink} text={buttonText} />

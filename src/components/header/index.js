@@ -18,11 +18,17 @@ const Header = ({ menuActive, setMenuActive, data }) => {
 
   return (
     <HeaderContainer isTop={isTop} isScrollDown={isScrollDown}>
-      <AnchorLink to="#intro">
-        <HeaderLogo />
-      </AnchorLink>
+      <div data-aos="fade-down" data-aos-duration="800" data-aos-delay="200">
+        <AnchorLink to="#intro">
+          <HeaderLogo />
+        </AnchorLink>
+      </div>
 
-      <Navigation>
+      <Navigation
+        data-aos="fade-down"
+        data-aos-duration="800"
+        data-aos-delay="200"
+      >
         <Navlist isOpen={menuActive}>
           {navListItems.map(({ name, anchor }, index) => (
             <NavlistItem onClick={() => setMenuActive(false)} key={index}>

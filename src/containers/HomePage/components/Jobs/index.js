@@ -28,13 +28,17 @@ const Jobs = () => {
   const { tabPanels, tabList, jobsTitle } = data.mdx.frontmatter
 
   return (
-    <JobsWrapper>
+    <JobsWrapper id="jobs">
       <SectionTitle>
         <span>02.</span>
         {jobsTitle}
       </SectionTitle>
 
-      <TabsContainer>
+      <TabsContainer
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
         <TabsWrapper>
           {tabList.map((tablistItem, index) => (
             <Tab key={index}>{tablistItem}</Tab>

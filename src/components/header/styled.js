@@ -64,7 +64,9 @@ export const Navlist = styled.ul`
     font-family: var(--font-mono);
 
     a {
-      padding: 18px 50px;
+      @media (max-width: 768px) {
+        padding: 18px 50px;
+      }
     }
 
     @media (max-width: 768px) {

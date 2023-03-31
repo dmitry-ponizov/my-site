@@ -40,7 +40,14 @@ const OtherProjects = () => {
 
   return (
     <OtherProjectsWrapper>
-      <OtherProjectsTitle>{otherProjectsTitle}</OtherProjectsTitle>
+      <OtherProjectsTitle
+        id="jobs"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
+        {otherProjectsTitle}
+      </OtherProjectsTitle>
 
       <OtherProjectsItems>
         {otherProjectsCards

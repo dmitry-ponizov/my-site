@@ -34,4 +34,8 @@ export const IntroWrapper = styled.section`
       font-size: 15px;
     }
   }
+
+  div {
+    display: flex;
+  }
 `

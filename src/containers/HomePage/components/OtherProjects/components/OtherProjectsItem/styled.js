@@ -19,6 +19,10 @@ export const OtherProjectsLink = styled.a`
   }
 `
 
+export const OtherProjectsItemWrapper = styled.div`
+  display: flex;
+`
+
 export const OtherProjectsItem = styled.li`
   box-shadow: 0 10px 30px -15px var(--color-box-shadow);
   display: flex;

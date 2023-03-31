@@ -35,15 +35,20 @@ const Projects = () => {
   const { projectsItems, projectsTitle } = data.mdx.frontmatter
 
   return (
-    <ProjectsWrapper>
+    <ProjectsWrapper id="projects">
       <SectionTitle>
         <span>03.</span>
         {projectsTitle}
       </SectionTitle>
 
       {projectsItems.map(
-        ({ name, projectLink, projectImg, ...projectsContent }, index) => (
-          <ProjectFeatured key={index}>
+        ({ projectLink, projectImg, ...projectsContent }, index) => (
+          <ProjectFeatured
+            key={index}
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-once="true"
+          >
             <ProjectLink
               href={projectLink}
               rel="noopener noreferrer"
