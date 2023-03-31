@@ -36,7 +36,12 @@ const Contact = () => {
   } = data.mdx
 
   return (
-    <ContactWrapper>
+    <ContactWrapper
+      id="contact"
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-once="true"
+    >
       <СontactNumberTitle>{numberTitle}</СontactNumberTitle>
 
       <ContactTitle>{contactTitle}</ContactTitle>

@@ -9,6 +9,15 @@ export const EmailWrapper = styled.div`
   z-index: 10;
   color: var(--color-light-slate);
 
+  &[data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+
+    &.aos-animate {
+      opacity: 1;
+    }
+  }
+
   @media (max-width: 1024px) {
     right: 20px;
   }

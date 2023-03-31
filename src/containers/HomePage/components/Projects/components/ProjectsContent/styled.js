@@ -26,10 +26,14 @@ export const TitleName = styled.span`
   color: var(--color-accent);
   font-family: var(--font-mono);
   font-size: 13px;
+
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 `
 
 export const TitleLink = styled.a`
-  font-size: clamp(24px, 5vw, 28px);
+  font-size: clamp(19px, 5vw, 28px);
   color: #ccd6f6 !important;
   font-weight: 700;
   line-height: 1.1;

@@ -28,7 +28,14 @@ const Intro = () => {
     <IntroWrapper id="intro">
       {parse(body)}
 
-      <StyledButton bigVariant link={buttonLink} text={buttonText} />
+      <div
+        data-aos="fade-up"
+        data-aos-delay="800"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
+        <StyledButton bigVariant link={buttonLink} text={buttonText} />
+      </div>
     </IntroWrapper>
   )
 }

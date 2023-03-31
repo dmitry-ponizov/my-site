@@ -18,7 +18,11 @@ const LeftSidebar = ({ data }) => {
   ]
 
   return (
-    <SocialsWrapper>
+    <SocialsWrapper
+      data-aos="new-animation"
+      data-aos-delay="1300"
+      data-aos-duration="800"
+    >
       <Socials>
         {socialIcons.map(
           ({ icon, link }, index) =>

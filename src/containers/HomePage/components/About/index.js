@@ -38,7 +38,12 @@ const About = () => {
         {aboutTitle}
       </SectionTitle>
 
-      <Content>
+      <Content
+        id="about"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-once="true"
+      >
         <div>{parse(body)}</div>
         <ImageWrapper>
           <GatsbyImage image={introImage} alt="Avatar" />
