@@ -50,11 +50,9 @@ const OtherProjects = () => {
       </OtherProjectsTitle>
 
       <OtherProjectsItems>
-        {otherProjectsCards
-          .slice(0, showProjects)
-          .map(({ ...otherProjectsItem }, index) => (
-            <OtherProjectsItem key={index} {...otherProjectsItem} />
-          ))}
+        {otherProjectsCards.slice(0, showProjects).map((props, index) => (
+          <OtherProjectsItem key={index} {...props} />
+        ))}
       </OtherProjectsItems>
 
       <StyledButton
