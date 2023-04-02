@@ -1,14 +1,6 @@
 import styled from "styled-components"
 
-export const SocialsWrapper = styled.div`
-  width: 40px;
-  position: fixed;
-  bottom: 0px;
-  left: 40px;
-  right: auto;
-  z-index: 10;
-  color: var(--color-light-slate);
-
+export const Socials = styled.div`
   &[data-aos="new-animation"] {
     opacity: 0;
     transition-property: transform, opacity;
@@ -22,6 +14,16 @@ export const SocialsWrapper = styled.div`
       transition-property: none;
     }
   }
+`
+
+export const SocialsWrapper = styled.div`
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 40px;
+  right: auto;
+  z-index: 10;
+  color: var(--color-light-slate);
 
   @media (max-width: 1024px) {
     left: 20px;
@@ -36,7 +38,7 @@ export const SocialsWrapper = styled.div`
   }
 `
 
-export const Socials = styled.ul`
+export const SocialsList = styled.ul`
   display: flex;
   flex-direction: column;
   align-items: center;

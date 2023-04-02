@@ -54,7 +54,10 @@ const Projects = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              <GatsbyImage image={getImage(projectImg)} alt={name} />
+              <GatsbyImage
+                image={getImage(projectImg)}
+                alt="Featured Project"
+              />
             </ProjectLink>
 
             <ProjectsContent {...projectsContent} />
