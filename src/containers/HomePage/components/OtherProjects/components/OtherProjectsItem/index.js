@@ -5,6 +5,7 @@ import OtherProjectsIcons from "../OtherProjectsIcons"
 
 import {
   OtherProjectsItem,
+  OtherProjectsItemWrapper,
   OtherProjectsLink,
   OtherProjectsText,
   TechnologiesList,
@@ -19,25 +20,32 @@ const ProjectsItem = ({
   cardsList,
 }) => {
   return (
-    <OtherProjectsItem>
-      <OtherProjectsIcons githubLink={githubLink} cardsLink={cardsLink} />
+    <OtherProjectsItemWrapper
+      data-aos="fade-up"
+      data-aos-duration="800"
+      data-aos-delay="200"
+      data-aos-once="true"
+    >
+      <OtherProjectsItem>
+        <OtherProjectsIcons githubLink={githubLink} cardsLink={cardsLink} />
 
-      <OtherProjectsLink
-        href={cardsLink}
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        {title}
-      </OtherProjectsLink>
+        <OtherProjectsLink
+          href={cardsLink}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          {title}
+        </OtherProjectsLink>
 
-      <OtherProjectsText>{parse(description)}</OtherProjectsText>
+        <OtherProjectsText>{parse(description)}</OtherProjectsText>
 
-      <TechnologiesList>
-        {cardsList.map((techItem, index) => (
-          <TechnologiesListItem key={index}>{techItem}</TechnologiesListItem>
-        ))}
-      </TechnologiesList>
-    </OtherProjectsItem>
+        <TechnologiesList>
+          {cardsList.map((techItem, index) => (
+            <TechnologiesListItem key={index}>{techItem}</TechnologiesListItem>
+          ))}
+        </TechnologiesList>
+      </OtherProjectsItem>
+    </OtherProjectsItemWrapper>
   )
 }
 

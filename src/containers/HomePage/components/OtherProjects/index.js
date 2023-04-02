@@ -49,11 +49,7 @@ const OtherProjects = () => {
         {otherProjectsTitle}
       </OtherProjectsTitle>
 
-      <OtherProjectsItems
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-once="true"
-      >
+      <OtherProjectsItems>
         {otherProjectsCards
           .slice(0, showProjects)
           .map(({ ...otherProjectsItem }, index) => (

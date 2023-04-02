@@ -20,7 +20,7 @@ const LeftSidebar = ({ data }) => {
   return (
     <Socials
       data-aos="new-animation"
-      data-aos-delay="1300"
+      data-aos-delay="1500"
       data-aos-duration="800"
     >
       <SocialsWrapper>

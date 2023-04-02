@@ -10,7 +10,7 @@ const RightSidebar = ({ email }) => {
   return (
     <EmailWrapper
       data-aos="new-animation"
-      data-aos-delay="1300"
+      data-aos-delay="1500"
       data-aos-duration="800"
     >
       <Email>

@@ -41,6 +41,7 @@ const Contact = () => {
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-once="true"
+      data-aos-delay="300"
     >
       <СontactNumberTitle>{numberTitle}</СontactNumberTitle>
 

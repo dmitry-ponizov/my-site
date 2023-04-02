@@ -32,18 +32,13 @@ const About = () => {
   const introImage = getImage(aboutImage)
 
   return (
-    <AboutWrapper>
+    <AboutWrapper id="about">
       <SectionTitle>
         <span>01.</span>
         {aboutTitle}
       </SectionTitle>
 
-      <Content
-        id="about"
-        data-aos="fade-up"
-        data-aos-duration="800"
-        data-aos-once="true"
-      >
+      <Content data-aos="fade-up" data-aos-duration="800" data-aos-once="true">
         <div>{parse(body)}</div>
         <ImageWrapper>
           <GatsbyImage image={introImage} alt="Avatar" />
