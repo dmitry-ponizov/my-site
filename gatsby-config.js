@@ -91,5 +91,12 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-s3`,
+      options: {
+        bucketName: "apps.nuevacode.com",
+        // bucketPrefix: "ponizov-personal-website",
+      },
+    },
   ],
 }
