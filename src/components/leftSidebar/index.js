@@ -6,7 +6,7 @@ import InstagramIcon from "../../images/socials/instagram.svg"
 import LinkedinIcon from "../../images/socials/linkedin.svg"
 import TwitterIcon from "../../images/socials/twitter.svg"
 
-import { SocialLink, Socials, SocialsWrapper } from "./styled"
+import { SocialLink, Socials, SocialsList, SocialsWrapper } from "./styled"
 
 const LeftSidebar = ({ data }) => {
   const socialIcons = [
@@ -18,24 +18,26 @@ const LeftSidebar = ({ data }) => {
   ]
 
   return (
-    <SocialsWrapper
+    <Socials
       data-aos="new-animation"
       data-aos-delay="1500"
       data-aos-duration="800"
     >
-      <Socials>
-        {socialIcons.map(
-          ({ icon, link }, index) =>
-            link && (
-              <li key={index}>
-                <SocialLink href={link} target="_blank">
-                  {icon}
-                </SocialLink>
-              </li>
-            )
-        )}
-      </Socials>
-    </SocialsWrapper>
+      <SocialsWrapper>
+        <SocialsList>
+          {socialIcons.map(
+            ({ icon, link }, index) =>
+              link && (
+                <li key={index}>
+                  <SocialLink href={link} target="_blank">
+                    {icon}
+                  </SocialLink>
+                </li>
+              )
+          )}
+        </SocialsList>
+      </SocialsWrapper>
+    </Socials>
   )
 }
 
