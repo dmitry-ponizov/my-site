@@ -1,9 +1,13 @@
 ## 🚀 Quick start
 
-1.  **Install Gatsby CLI**
+1.  **Set Up Dev Environment**
 
     ```shell
     npm install -g gatsby-cli
+    ```
+
+    ```shell
+    yarn install
     ```
 
 2.  **Run a Gatsby site.**
