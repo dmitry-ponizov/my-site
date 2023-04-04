@@ -7,16 +7,11 @@ const Loader = () => {
   return (
     <LoaderWrapper>
       <LogoWrapper>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="261.021"
-          height="298.536"
-          viewBox="0 0 261.021 298.536"
-        >
+        <svg width="261.021" height="298.536" viewBox="0 0 261.021 298.536">
           <Tween
             duration={1}
             delay={3}
-            ease="Back.easeInOut"
+            ease="Back.easeIn"
             from={{
               opacity: 1,
             }}
