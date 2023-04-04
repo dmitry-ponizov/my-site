@@ -6,7 +6,7 @@
     gatsby develop
     ```
 
-2.  **Start developing.**
+2.  **Create Build.**
 
     Navigate into your new site’s directory and start it up.
 
